@@ -9,7 +9,7 @@ seqlevels(bs) <- seqlevels(txdb)
 library(devtools)
 scripts <- c("convert_GAlignments_to_coverage", "save_GRanges_as_bedGraph", "load_NETSeq_BAM", "find_splice_sites")
 for (script in scripts) {
-  paste0("https://github.com/Maxim-Ivanov/Utility_functions/blob/master/", script, ".R?raw=TRUE") %>% devtools::source_url()
+  paste0("https://github.com/Maxim-Ivanov/Utility_functions/blob/main/", script, ".R?raw=TRUE") %>% devtools::source_url()
 }
 
 
