@@ -5,10 +5,10 @@
 # 3' end: Illumina Small RNA adapter;
 
 # Download FASTQ files from SRA:
-echo -e "SRR5276076\tLiu2018_s01_wt_MM_R1
-SRR5276078\tLiu2018_s02_wt_MM_R2
-SRR5276077\tLiu2018_s03_wt_RM_R1
-SRR5276079\tLiu2018_s04_wt_RM_R2" > Liu2018_acc.txt
+echo -e "SRR5276076\tLiu2018_s01_wt_MM_rep1
+SRR5276078\tLiu2018_s02_wt_MM_rep2
+SRR5276077\tLiu2018_s03_wt_RM_rep1
+SRR5276079\tLiu2018_s04_wt_RM_rep2" > Liu2018_acc.txt
 
 awk '{cmd="fastq-dump --gzip "$1" && \
   mv "$1".fastq.gz "$2".fastq.gz"; system(cmd)}' Liu2018_acc.txt
