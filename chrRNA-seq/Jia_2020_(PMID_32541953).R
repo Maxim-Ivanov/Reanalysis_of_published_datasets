@@ -10,7 +10,7 @@ library(devtools)
 
 scripts <- c("skip_duplicated_reads", "filter_ga_by_terminal_subalignments", "write_grl_as_bed12")
 for (script in scripts) {
-  paste0("https://github.com/Maxim-Ivanov/Utility_functions/blob/master/", script, ".R?raw=TRUE") %>% devtools::source_url()
+  paste0("https://github.com/Maxim-Ivanov/Utility_functions/blob/main/", script, ".R?raw=TRUE") %>% devtools::source_url()
 }
 
 adapter <- "CTGTAGGCACCATCAAT"
