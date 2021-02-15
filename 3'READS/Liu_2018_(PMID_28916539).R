@@ -10,7 +10,7 @@ library(devtools)
 
 scripts <- c("save_GRanges_as_bedGraph", "merge_and_normalize_GRanges", "convert_GRanges_to_coverage")
 for (script in scripts) {
-  paste0("https://github.com/Maxim-Ivanov/Utility_functions/blob/master/", script, ".R?raw=TRUE") %>% devtools::source_url()
+  paste0("https://github.com/Maxim-Ivanov/Utility_functions/blob/main/", script, ".R?raw=TRUE") %>% devtools::source_url()
 }
 
 process_3pReads_BAM <- function(bamfile, filter_pass = TRUE) {
