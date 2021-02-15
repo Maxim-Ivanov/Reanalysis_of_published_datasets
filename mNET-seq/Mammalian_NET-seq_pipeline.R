@@ -10,7 +10,7 @@ library(devtools)
 
 scripts <- c("convert_GAlignments_to_coverage", "find_splice_sites", "load_NETSeq_BAM")
 for (script in scripts) {
-  paste0("https://github.com/Maxim-Ivanov/Utility_functions/blob/master/", script, ".R?raw=TRUE") %>% devtools::source_url()
+  paste0("https://github.com/Maxim-Ivanov/Utility_functions/blob/main/", script, ".R?raw=TRUE") %>% devtools::source_url()
 }
 
 # Find all annotated splice sites (to skip NET-seq reads originating from splicing intermediates):
