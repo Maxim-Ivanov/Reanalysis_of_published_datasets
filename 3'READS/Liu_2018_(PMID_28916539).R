@@ -41,7 +41,7 @@ names(grlist) <- bamfiles %>% str_replace("_mapq_dedup.bam", "")
 
 # Save individual replicates as Bedgraph:
 for (i in seq_along(grlist)) {
-  save_GRanges_as_bedGraph(grlist[[i]], paste0(names(grlist)[[i]], ".bedgraph.gz"))
+  save_GRanges_as_bedGraph(grlist[[i]], paste0(names(grlist)[[i]], "_fw_rev.bedgraph.gz"))
 }
 
 # Merge replicates/samples and save as Bedgraph:
