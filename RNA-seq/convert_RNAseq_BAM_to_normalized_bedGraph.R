@@ -2,7 +2,7 @@ library(GenomicAlignments)
 library(tidyverse)
 library(devtools)
 
-prefix <- "https://github.com/Maxim-Ivanov/Utility_functions/blob/master/"
+prefix <- "https://github.com/Maxim-Ivanov/Utility_functions/blob/main/"
 paste0(prefix, "convert_GAlignments_to_coverage.R?raw=TRUE") %>% devtools::source_url()
 paste0(prefix, "save_GRanges_as_bedGraph.R?raw=TRUE") %>% devtools::source_url()
 
