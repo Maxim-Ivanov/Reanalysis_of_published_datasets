@@ -41,12 +41,12 @@ names(grlist) <- bamfiles %>% str_replace("_mapq_dedup.bam", "")
 
 # Save individual replicates as Bedgraph:
 for (i in seq_along(grlist)) {
-  save_GRanges_as_bedGraph(grlist[[i]], paste0(names(grlist)[[i]], "_fw_rev.bedgraph.gz"))
+  save_GRanges_as_bedGraph(grlist[[i]], paste0(names(grlist)[[i]], ".bedgraph.gz"))
 }
 
 # Merge replicates/samples and save as Bedgraph:
-grlist[1:2] %>% merge_and_normalize_GRanges(norm = FALSE) %>% save_GRanges_as_bedGraph("Liu2017_WT_Min.bedgraph.gz")
-grlist[3:4] %>% merge_and_normalize_GRanges(norm = FALSE) %>% save_GRanges_as_bedGraph("Liu2017_WT_YPD.bedgraph.gz")
-grlist %>% merge_and_normalize_GRanges(norm = FALSE) %>% save_GRanges_as_bedGraph("Liu2017_WT_merged.bedgraph.gz")
+grlist[1:2] %>% merge_and_normalize_GRanges(norm = FALSE) %>% save_GRanges_as_bedGraph("Liu2018_WT_Min.bedgraph.gz")
+grlist[3:4] %>% merge_and_normalize_GRanges(norm = FALSE) %>% save_GRanges_as_bedGraph("Liu2018_WT_YPD.bedgraph.gz")
+grlist %>% merge_and_normalize_GRanges(norm = FALSE) %>% save_GRanges_as_bedGraph("Liu2018_WT_merged.bedgraph.gz")
 
 
