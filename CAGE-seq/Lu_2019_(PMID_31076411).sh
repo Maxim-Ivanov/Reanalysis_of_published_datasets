@@ -46,9 +46,9 @@ done
 
 # Merge forward and reverse Bedgraph files for the same sample:
 f_str="fw"; r_str="rev"; ext=".bg"; 
-for file1 in Lu2019*${f_str}${ext}; do 
-  file2=${file1/${f_str}/${r_str}} && 
-  outfile=${file1/${f_str}${ext}/fw_rev.bedgraph.gz} && 
+for file1 in Lu2019*fw.bg; do 
+  file2=${file1/_fw/_rev} && 
+  outfile=${file1/_fw.bg/.bedgraph.gz} && 
   echo $file1 "+" $file2 "=" $outfile && 
   awk 'BEGIN{OFS="\t"}{print $1,$2,$3,"-"$4}' $file2 | 
   cat $file1 - | sort -k1,1 -k2,2n | 
