@@ -63,8 +63,8 @@ for f1 in PE_RNAseq_Hofmann2019*R1.fq.gz; do
   f2=${f1/R1/R2} &&  
   echo $f1 "+" $f2 && 
   cutadapt -j 4 -m 18 -O 5 -a "CTGTCTCTTATACACATCTG" \
-    -A "CTGTCTCTTATACACATCTG" -g "A{100}" -G "A{100}" \
-    -g "T{100}" -G "T{100}" -o ${f1/.fq.gz/_trim.fq} \
+    -A "CTGTCTCTTATACACATCTG" -g "XA{100}" -G "XA{100}" \
+    -g "XT{100}" -G "XT{100}" -o ${f1/.fq.gz/_trim.fq} \
     -p ${f2/.fq.gz/_trim.fq} <(zcat $f1) <(zcat $f2); 
 done
 
