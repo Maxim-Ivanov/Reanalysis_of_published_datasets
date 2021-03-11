@@ -1,8 +1,3 @@
-# D:\Our NGS data\TIF-Seq\fastq
-# UMIs (8 nt) were already trimmed and saved to the headers;
-# Many 3PrimeEnd reads consist of G only (because it was NextSeq). Cutadapt should use --nextseq_trim instead of -q;
-# Many 3PrimeEnd reads begin with a polyT stretch (which can start with up to 3 bp offset);
-
 # Thomas et al., 2020 (PMID 32444691)
 # "Transcript isoform sequencing reveals widespread promoter-proximal transcriptional termination in Arabidopsis"
 # PE sequencing (Illumina NextSeq)
