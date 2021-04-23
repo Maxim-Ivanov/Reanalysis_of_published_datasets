@@ -16,7 +16,7 @@ RNAseq_BAM_to_normalized_bedGraph <- function(bamfile, mode = "PE", stranded = T
   } else {
     ga <- readGAlignments(bamfile)
   }
-  cov <- convert_GAlignments_to_coverage(ga, merge.strands = !stranded, flip.strands = switch_strands, normalize = normalize, norm_to = norm_to)
+  cov <- convert_GAlignments_to_coverage(ga, merge.strands = !stranded, flip.strands = switch_strand, normalize = normalize, norm_to = norm_to)
   return(cov)
 }
 
