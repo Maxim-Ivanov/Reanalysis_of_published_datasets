@@ -28,4 +28,4 @@ cov_list <- lapply(bamfiles, RNAseq_BAM_to_normalized_bedGraph, mode = "SE")
 
 # Save as bedGraph files:
 names(cov_list) <- bamfiles %>% basename() %>% str_replace(".bam", "")
-mapply(save_GRanges_as_bedGraph, col_list, paste0(names(cov_list), ".bedgraph.gz"))
+mapply(save_GRanges_as_bedGraph, cov_list, paste0(names(cov_list), ".bedgraph.gz"))
