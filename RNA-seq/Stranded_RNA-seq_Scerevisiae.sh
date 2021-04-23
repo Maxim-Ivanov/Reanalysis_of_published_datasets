@@ -85,7 +85,7 @@ for file in *Aligned*; do mv $file ${file/_Aligned.out/}; done
 # Count aligned read pairs:
 for file in RNAseq*bam; do 
   echo $file $(samtools flagstat $file | \
-    sed -n '9p' | awk '{sprintf("%i", $1/2)}'); 
+    sed -n '9p' | awk '{printf("%i", $1/2)}'); 
 done
 
 # Filter for reads with high MAPQ in proper pairs:
