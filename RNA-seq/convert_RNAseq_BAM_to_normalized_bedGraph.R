@@ -7,7 +7,7 @@ paste0(prefix, "convert_GAlignments_to_coverage.R?raw=TRUE") %>% devtools::sourc
 paste0(prefix, "save_GRanges_as_bedGraph.R?raw=TRUE") %>% devtools::source_url()
 
 bamdir <- "."
-bamfiles <- list.files(pattern = "bam$")
+bamfiles <- list.files(bamdir, pattern = "bam$", full.names = TRUE)
 
 RNAseq_BAM_to_normalized_bedGraph <- function(bamfile, mode = "PE", stranded = TRUE, switch_strand = TRUE, normalize = TRUE, norm_to = 1e06) {
   stopifnot(mode %in% c("PE", "SE"))
