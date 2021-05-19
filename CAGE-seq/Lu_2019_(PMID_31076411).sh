@@ -45,7 +45,6 @@ for str in "+" "-"; do
 done
 
 # Merge forward and reverse Bedgraph files for the same sample:
-f_str="fw"; r_str="rev"; ext=".bg"; 
 for file1 in Lu2019*fw.bg; do 
   file2=${file1/_fw/_rev} && 
   outfile=${file1/_fw.bg/.bedgraph.gz} && 
